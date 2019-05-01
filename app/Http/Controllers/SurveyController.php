@@ -97,7 +97,7 @@ class SurveyController extends Controller
     		//My Body
 			elseif ($page['name'] == "My Body")
 			{
-    		//list of questions
+    			//list of questions
 				$questions = collect([
 
 					//Energy
@@ -129,11 +129,29 @@ class SurveyController extends Controller
 		    			//char limit
 		    			'limit'=>140
 					],
+					[
+						//id
+						'id'=>2,
+						//question type
+						'type'=>'followup',
+		    			//question
+		    			'question'=>'Why is your energy low?',
+		    			//question words/scale
+		    			'scale'=> NULL,
+		    			//question icons
+		    			'icons'=> NULL,
+		    			//parent question
+		    			'parent_question_id'=> 1,
+	    				//trigger answer
+	    				'trigger_answer'=> [1,2],
+		    			//char limit
+		    			'limit'=> 140
+					],
 
 					//Nutrition
 					[
 						//id
-						'id'=>2,
+						'id'=>3,
 						//question type
 						'type'=>'boolean',
 		    			//question
@@ -154,7 +172,7 @@ class SurveyController extends Controller
 					],
 					[
 						//id
-						'id'=>3,
+						'id'=>4,
 						//question type
 						'type'=>'followup',
 		    			//question
@@ -164,7 +182,7 @@ class SurveyController extends Controller
 		    			//question icons
 		    			'icons'=> NULL,
 		    			//parent question
-		    			'parent_question_id'=> 2,
+		    			'parent_question_id'=> 3,
 	    				//trigger answer
 	    				'trigger_answer'=> 0,
 		    			//char limit
@@ -185,7 +203,7 @@ class SurveyController extends Controller
 					//personal
 					[
 						//id
-						'id'=>4,
+						'id'=>5,
 						//question type
 						'type'=>'boolean',
 		    			//question
@@ -206,7 +224,7 @@ class SurveyController extends Controller
 					],
 					[
 						//id
-						'id'=>5,
+						'id'=>6,
 						//question type
 						'type'=>'followup',
 		    			//question
@@ -216,7 +234,7 @@ class SurveyController extends Controller
 		    			//question icons
 		    			'icons'=> NULL,
 		    			//parent question
-		    			'parent_question_id'=> 4,
+		    			'parent_question_id'=> 5,
 	    				//trigger answer
 	    				'trigger_answer'=> 1,
 		    			//char limit
@@ -226,7 +244,7 @@ class SurveyController extends Controller
 					//Focus
 					[
 						//id
-						'id'=>6,
+						'id'=>7,
 						//question type
 						'type'=>'metric',
 		    			//question
@@ -256,7 +274,7 @@ class SurveyController extends Controller
 					//Confidence
 					[
 						//id
-						'id'=>7,
+						'id'=>8,
 						//question type
 						'type'=>'metric',
 		    			//question
@@ -281,6 +299,35 @@ class SurveyController extends Controller
 		    			'trigger_answer'=> NULL,
 		    			//char limit
 		    			'limit'=>140
+					],
+					//Excitement
+					[
+						//id
+						'id'=>9,
+						//question type
+						'type'=>'metric',
+		    			//question
+		    			'question'=>'Whats your excitement level for todays practice?',
+		    			//question words/scale
+		    			'scale'=> [
+		    				1=>'Terrible',
+		    				2=>'Bad' ,
+		    				3=>'Meh' ,
+		    				4=>'Good',
+		    				5=>'Great'
+		    			],
+		    			//question icons
+		    			'icons'=> [
+		    				'small'=>'Excite_empty',
+		    				'middle'=>'Excite_half',
+		    				'big'=>'Excite_full',
+		    			],
+		    			//parent question
+		    			'parent_question_id'=> NULL,
+		    			//trigger answer
+		    			'trigger_answer'=> NULL,
+		    			//char limit
+		    			'limit'=>140
 					]
 
 				]);
@@ -296,7 +343,7 @@ class SurveyController extends Controller
 					//personal
 					[
 						//id
-						'id'=>8,
+						'id'=>10,
 						//question type
 						'type'=>'boolean',
 		    			//question
@@ -317,7 +364,7 @@ class SurveyController extends Controller
 					],
 					[
 						//id
-						'id'=>9,
+						'id'=>11,
 						//question type
 						'type'=>'followup',
 		    			//question
@@ -327,12 +374,30 @@ class SurveyController extends Controller
 		    			//question icons
 		    			'icons'=> NULL,
 		    			//parent question
-		    			'parent_question_id'=> 8,
+		    			'parent_question_id'=> 10,
 	    				//trigger answer
 	    				'trigger_answer'=> 0,
 		    			//char limit
 		    			'limit'=> 140
-					]
+					],
+					[
+						//id
+						'id'=>12,
+						//question type
+						'type'=>'open',
+		    			//question
+		    			'question'=>'What do you want to focus on in practice today?',
+		    			//question words/scale
+		    			'scale'=> NULL,
+		    			//question icons
+		    			'icons'=> NULL,
+		    			//parent question
+		    			'parent_question_id'=> NULL,
+	    				//trigger answer
+		    			'trigger_answer'=> NULL,
+		    			//char limit
+		    			'limit'=> 140
+					],
 				]);
 				$page->put('questions', $questions);
     			
