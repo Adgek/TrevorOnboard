@@ -429,7 +429,7 @@ class SurveyController extends Controller
     	//My Virtues
     		//List of Virtues
     	}
-    	dd($survey);
+    	//dd($survey);
     	return view('testing', ['survey' => $survey]);
     }
 }
