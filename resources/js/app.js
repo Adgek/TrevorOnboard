@@ -8,6 +8,19 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import Vue from 'vue'
+import Vuetify from 'vuetify'
+import BootstrapVue from 'bootstrap-vue'
+
+import 'vuetify/dist/vuetify.min.css'
+
+// app.js
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+Vue.use(Vuetify) //vuetify for pages traversal
+Vue.use(BootstrapVue) //bootstrap for navbar
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -20,6 +33,9 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('survey-component', require('./components/SurveyComponent.vue').default);
+Vue.component('introduction-component', require('./components/IntroductionComponent.vue'));
+Vue.component('plan-component', require('./components/PlanComponent.vue'));
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
