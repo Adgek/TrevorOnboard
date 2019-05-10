@@ -11,4 +11,10 @@
 |
 */
 
-Route::get('/', 'SurveyController@SendCheckInInfo');
+//Route::get('/', 'SurveyController@SendCheckInInfo');
+Route::get('/', function () {
+    return view('example');
+});
+
+Route::get('SendCheckInInfo', 'SurveyController@SendCheckInInfo');
+Route::get('SanityCheck', 'SurveyController@SanityCheck');
