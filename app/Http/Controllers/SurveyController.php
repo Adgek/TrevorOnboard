@@ -9,6 +9,11 @@ use Illuminate\Support\Carbon;
 
 class SurveyController extends Controller
 {
+	public function SanityCheck()
+	{
+		return response('THIS WORKED');
+	}
+
     //
     public function SendCheckInInfo()
     {
@@ -429,7 +434,9 @@ class SurveyController extends Controller
     	//My Virtues
     		//List of Virtues
     	}
-    	//dd($survey);
-    	return view('testing', ['survey' => $survey]);
+		//dd($survey);
+		
+		//return survey object as JSON (for easier parsing of data)
+    	return response()->json(['survey' => $survey]);
     }
 }
