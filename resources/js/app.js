@@ -17,6 +17,7 @@ import 'vuetify/dist/vuetify.min.css'
 // app.js
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 Vue.use(Vuetify) //vuetify for pages traversal
 Vue.use(BootstrapVue) //bootstrap for navbar
@@ -34,8 +35,10 @@ Vue.use(BootstrapVue) //bootstrap for navbar
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('survey-component', require('./components/SurveyComponent.vue').default);
-Vue.component('introduction-component', require('./components/IntroductionComponent.vue'));
-Vue.component('plan-component', require('./components/PlanComponent.vue'));
+Vue.component('introduction-component', require('./components/IntroductionComponent.vue').default);
+Vue.component('plan-component', require('./components/PlanComponent.vue').default);
+Vue.component('lastDay-component', require('./components/LastDayComponent.vue').default);
+Vue.component('myBody-component', require('./components/MyBodyComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
