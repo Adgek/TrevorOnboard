@@ -4,18 +4,46 @@
 
 <template>
     <div id="app">
+       
+        <plan-component vbind:title="The Plan" :date=pageInfo.date :focuses="pageInfo.focuses" :notes="pageInfo.notes"></plan-component>
         
-        <b-navbar class="header" type="dark" variant="info" fixed="top">
-
-            <b-navbar-brand href="#">Check In</b-navbar-brand>
-
-        </b-navbar>
- 
+        <lastDay-component :lastDay="pageInfo.last_day"></lastDay-component>
     </div>
 </template>
 
 <script>
+
+import PlanComponent from './PlanComponent'
+import LastDayComponent from './LastDayComponent'
+
+
 export default {
+
+    props: {
+        pageInfo: {
+            type: Object //object containing page info for introduction
+        }
+    },
+
+    data: () =>({
+        title : null,
+        focuses : {}
+
+    }),
+
+    mounted(){
+        
+        this.focuses = this.pageInfo.focuses;
+        
+      
+        console.log(this.pageInfo);
+        console.log('before intro focus');
+        console.log(this.focuses);
+        console.log('after intro focus');
+
+    },
+
+    
     
 }
 </script>
