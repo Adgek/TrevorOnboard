@@ -39,6 +39,9 @@ Vue.component('introduction-component', require('./components/IntroductionCompon
 Vue.component('plan-component', require('./components/PlanComponent.vue').default);
 Vue.component('lastDay-component', require('./components/LastDayComponent.vue').default);
 Vue.component('myBody-component', require('./components/MyBodyComponent.vue').default);
+Vue.component('myMindset-component', require('./components/MyMindsetComponent.vue').default);
+Vue.component('mySkiing-component', require('./components/MySkiingComponent.vue').default);
+Vue.component('goals-component', require('./components/GoalsComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
