@@ -22,6 +22,10 @@ export default {
     props: {
         pageInfo: {
             type: Object //object containing page info for introduction
+        },
+
+        introSurveyAnswers : {
+            type: Object //survey answers 
         }
     },
 
@@ -36,10 +40,7 @@ export default {
         this.focuses = this.pageInfo.focuses;
         
       
-        console.log(this.pageInfo);
-        console.log('before intro focus');
-        console.log(this.focuses);
-        console.log('after intro focus');
+        console.log(this.introSurveyAnswers)
 
     },
 
