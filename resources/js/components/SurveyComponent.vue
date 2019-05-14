@@ -75,11 +75,22 @@
                             <v-stepper-items  v-if="survey">
                                 <v-stepper-content step="1">
 
-                                    <introduction-component :pageInfo=survey.pages[0]></introduction-component>
+                                    <introduction-component :pageInfo=survey.pages[0] :introSurveyAnswers=surveyAnswers></introduction-component>
                                 </v-stepper-content>
                                 <v-stepper-content step="2">
-                                    <myBody-component  :myBody=survey.pages[1] vbind:title="My Body"></myBody-component>
+                                    <myBody-component  :myBody=survey.pages[1] vbind:title="My Body" :surveyAnswers=surveyAnswers></myBody-component>
 
+                                </v-stepper-content>
+                                <v-stepper-content step="3">
+                                    <myMindset-component :myMindset=survey.pages[2] vbind:title="My Mindset" :surveyAnswers=surveyAnswers></myMindset-component>
+                                    
+                                </v-stepper-content>
+                                <v-stepper-content step="4">
+                                    <mySkiing-component :mySkiing=survey.pages[3] vbind:title="My Skiing" :surveyAnswers=surveyAnswers></mySkiing-component>
+
+                                </v-stepper-content>
+                                <v-stepper-content step="5">
+                                    <goals-component :myGoals=survey.pages[4] vbind:title="Goals" :surveyAnswers=surveyAnswers></goals-component>
                                 </v-stepper-content>
                             </v-stepper-items>
                             <!-- Introduction -->
@@ -89,7 +100,7 @@
                                 <v-layout row wrap>
                                 
                                     <v-flex>
-                                        <v-btn v-scroll-to="'#top'" flat v-if="step > 0" @click.native="step-- ">Previous</v-btn>
+                                        <v-btn flat v-if="step > 1" @click.native="step-- ">Previous</v-btn>
                                         
                                     </v-flex>
                                     <v-flex>
@@ -134,7 +145,31 @@
 
         data: ()=>({
                 surveyJson: null,
-                surveyAnswers: null,
+                
+                //this is the survey answers object that is passed around
+                surveyAnswers: {
+                    pages : {
+                        introduction: {
+                            
+                            answers : {}
+                            
+                        },
+                        myBody: {
+                            answers: {}
+                                
+                            
+                        },
+                        myMindset: {
+                            answers: {}
+                        },
+                        mySkiing: {
+                            answers: {}
+                        },
+                        goals: {
+                            answers: {}
+                        }
+                    }
+                },
    
                 survey: {
                     pages: null,
