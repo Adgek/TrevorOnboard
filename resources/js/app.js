@@ -11,6 +11,7 @@ window.Vue = require('vue');
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import BootstrapVue from 'bootstrap-vue'
+import vuescrollto from 'vue-scrollto'
 
 import 'vuetify/dist/vuetify.min.css'
 
@@ -21,6 +22,19 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 Vue.use(Vuetify) //vuetify for pages traversal
 Vue.use(BootstrapVue) //bootstrap for navbar
+Vue.use(vuescrollto) //for easy scrolling
+
+// Vue.use(Vuetify, {
+//     theme: {
+//         primary: "#D5D8DC",
+//         secondary: "#D5D8DC",
+//         accent: "#9c27b0",
+//         error: "#f44336",
+//         warning: "#ffeb3b",
+//         info: "#2196f3",
+//         success: "#4caf50"
+//     }
+// })
 
 /**
  * The following block of code may be used to automatically register your
