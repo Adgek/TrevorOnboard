@@ -3,32 +3,39 @@
 -->
 
 <template>
-    <div>
+    <div class="grey-background">
        
         <h3>{{title}}</h3>
             
+    
 
-
-        <v-card>
-        <v-container fluid grid-list-lg>
-          <v-layout row wrap>
+       
+        <v-container fluid grid-list-lg >
+          <v-layout row wrap >
             <v-flex xs12>
               <v-card color="white" class="black--text">
-                <v-card-title primary-title>
-                  <div>
+                <v-card-title primary-title >
+                  
                     <div class="headline">
-                        <v-layout row justify-space-between>
-                            <v-flex>
+                        <v-layout align-space-between justify-space-around row>
+                            <v-flex >
                                 {{location}}
                             </v-flex>
+                           
                             <v-flex >
                                 {{parsedDate}}
+                            </v-flex>
+                            <v-flex >
+                                TEST
+                            </v-flex>
+                            <v-flex xs1>
+                                TEST2
                             </v-flex>
                         </v-layout>
                         
                     </div>
                     
-                  </div>
+                  
                 </v-card-title>
                 <v-card-title>
                     <div>
@@ -64,7 +71,7 @@
             </v-flex>
           </v-layout>
         </v-container>
-        </v-card>
+       
  
     </div>
 </template>
@@ -113,11 +120,23 @@ export default {
         
     },
 
+    created () {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+
+    destroyed () {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
+
     
 
     methods: {
         parseDate: function(nonParsedDate) {
             this.parsedDate = nonParsedDate.slice(0, 10);
+        },
+
+        handleSCroll: function(){
+            scrollTo('#bottom', 500, { easing: 'linear', offset: -50 });
         }
     }
 

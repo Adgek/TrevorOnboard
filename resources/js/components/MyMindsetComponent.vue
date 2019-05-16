@@ -3,7 +3,7 @@
         
         <h3>{{title}}</h3>
 
-        <v-card>
+        
             <v-container fluid grid-list-lg>
                 <v-layout row wrap>
                     <v-flex xs12>
@@ -40,8 +40,11 @@
                             </v-card-actions>
                             
                         </v-card-text>
-                        <v-divider></v-divider>
-                        
+                    </v-card>
+                    </v-flex>
+
+                    <v-flex xs12>
+                        <v-card>
                         <v-card-title primary-title class="justify-center">
                         <div>
                             <div class="headline">
@@ -72,7 +75,10 @@
                             </v-card-actions>
                             
                         </v-card-text>
-                        <v-divider></v-divider>
+                        </v-card>
+                    </v-flex>
+                    <v-flex xs12>
+                        <v-card>
                         <v-card-title primary-title class="justify-center">
                         <div>
                             <div class="headline">
@@ -103,8 +109,12 @@
                             </v-card-actions>
                             
                         </v-card-text>
-
-                        <v-divider></v-divider>
+                        </v-card>
+                    </v-flex>
+                    
+                   
+                    <v-flex xs12>
+                        <v-card>
                         <v-card-title primary-title class="justify-center">
                         <div>
                             <div class="headline">
@@ -138,9 +148,12 @@
                         
                     </v-card>
                     </v-flex>
+                        
+                        
+                    
                 </v-layout>
             </v-container>
-        </v-card>
+       
  
    </div>
 </template>

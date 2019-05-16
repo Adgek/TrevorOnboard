@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="grey-background">
         <h3>{{title}}</h3>
 
-        <v-card>
+       
             <v-container fluid grid-list-lg>
                 <v-layout row wrap>
                     <v-flex xs12>
@@ -40,15 +40,10 @@
                             
                         </v-card-text>
                     </v-card>
+                   
                     </v-flex>
-                </v-layout>
-            </v-container>
-        </v-card>
-        <v-card>
-            <v-container fluid grid-list-lg>
-                <v-layout row wrap>
                     <v-flex xs12>
-                    <v-card color="white" class="black--text">                
+                         <v-card color="white" class="black--text">                
                         
                         <v-card-title primary-title class="justify-center">
                         <div>
@@ -85,9 +80,12 @@
                         
                     </v-card>
                     </v-flex>
+            
+                   
+                    
                 </v-layout>
             </v-container>
-        </v-card>
+        
     </div>
 </template>
 
@@ -137,7 +135,7 @@ export default {
                 {
                     //reset values since text box is no longer valid
                     this.energyQuestionTrigger = false;
-                    surveyAnswers.pages.myBody.answers['Why is energy low?'] = null;
+                    this.surveyAnswers.pages.myBody.answers['Why is energy low?'] = null;
                 }
 
                 this.surveyAnswers.pages.myBody.answers['How is my energy level?'] = targetContent;

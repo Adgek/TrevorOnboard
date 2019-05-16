@@ -2,7 +2,7 @@
     <div>
         <h3>{{title}}</h3>
 
-        <v-card>
+       
             <v-container fluid grid-list-lg>
                 <v-layout row wrap>
                     <v-flex xs12>
@@ -27,8 +27,8 @@
                             <v-card-actions class="justify-center" >
                                 <div >
                                     <v-flex >
-                                        <!-- TODO: dynamically get total number of scale choices -->
-                                            <v-select :items="goals" box label="Select a goal" ></v-select>
+                                        <!-- Load array into drop down -->
+                                        <v-select :items="goals" box label="Select a goal" v-model="surveyAnswers.pages.goals.answers['My skiing goal today?']"></v-select>
                                             
                                         
                                     </v-flex>
@@ -41,7 +41,6 @@
                     </v-flex>
                 </v-layout>
             </v-container>
-        </v-card>
         
     </div>
 </template>
@@ -56,7 +55,7 @@ export default {
     }),
 
     mounted() {
-        this.goals = this.myGoals.goals;
+        this.goals = Object.values(this.myGoals.goals);
         console.log(this.goals);
 
 

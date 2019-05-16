@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="grey-background top-padding">
         <h3>{{title}}</h3>
 
-        <v-card>
+       
         <v-container fluid grid-list-lg>
           <v-layout row wrap>
             <v-flex xs12>
@@ -71,7 +71,7 @@
             </v-flex>
           </v-layout>
         </v-container>
-        </v-card>
+       
     </div>
 </template>
 

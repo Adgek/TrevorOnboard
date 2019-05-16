@@ -4,77 +4,32 @@
 
 <template>
     <!-- Main div for app -->
-        <div id="app"  >
+        <div id="app" class="grey-background" >
 
             <!-- Navbar at the top of screen TODO: centre it! -->       
-            <div justify-center id="top">
+            <div justify-center id="top" >
 
                 <b-navbar class="header bottom-pad" type="dark" variant="info" fixed="top">
 
-                    <b-navbar-brand href="#">Check In</b-navbar-brand>
+                    <b-navbar-brand center-bar>Check In</b-navbar-brand>
 
                 </b-navbar>
 
             </div>
-
+            
             <!-- Used vuetify for some cool travelling between 'pages' -->
-            <v-app>
+            <v-app class="grey-background">
            
-                <v-content>
+               
 
-                    <v-container class="top-padding">
-                       
-                        <br>
-
-                        <v-stepper v-model="step" vertical > <!-- Scroll to top is working after clicking 'Previous' and 'Next' -->
+                        <v-stepper class="grey-background" v-model="step" vertical v-if="survey.pages" > <!-- Scroll to top is working after clicking 'Previous' and 'Next' -->
 
                             <!-- total pages with headers - used to step back and forth -->
                             <!-- TODO: template based on total pages -->
-                            <v-stepper-header  v-if="survey">
-
-                                <v-stepper-step step="1" :complete="step > 1">
-                                    
-                                    {{survey.pages[0].name}} <!-- TODO: figure out a way to get page names better -->
-
-                                </v-stepper-step>
-
-                                <v-divider></v-divider>
-
-                                <v-stepper-step step="2" :complete="step > 2">
-
-                                    {{survey.pages[1].name}}
-
-                                </v-stepper-step>
-
-                                <v-divider></v-divider>
-
-                                <v-stepper-step step="3" :complete="step > 3">
-
-                                    {{survey.pages[2].name}}
-
-                                </v-stepper-step>
-
-                                <v-divider></v-divider> 
-                                
-                                <v-stepper-step step="4" :complete="step > 4">
-
-                                    {{survey.pages[3].name}}
-
-                                </v-stepper-step>
-
-                                <v-divider></v-divider>
-
-                                <v-stepper-step step="5" :complete="step > 5">
-
-                                    {{survey.pages[4].name}}
-
-                                </v-stepper-step>
-
-                                <v-divider></v-divider>
-                            </v-stepper-header>
-                            <v-stepper-items  v-if="survey">
+                           
+                            <v-stepper-items class="grey-background" >
                                 <v-stepper-content step="1">
-
+                                    
                                     <introduction-component :pageInfo=survey.pages[0] :introSurveyAnswers=surveyAnswers></introduction-component>
                                 </v-stepper-content>
                                 <v-stepper-content step="2">
@@ -96,11 +51,13 @@
                             <!-- Introduction -->
                             
 
-                             <v-container grid-list-md text-xs-center>
+                             
+                                 <div class="navbar-test">
+                               <v-container grid-list-md text-xs-center>
                                 <v-layout row wrap>
                                 
                                     <v-flex>
-                                        <v-btn flat v-if="step > 1" @click.native="step-- ">Previous</v-btn>
+                                        <v-btn id="previous" class="text--white" color="#E6E8EA" v-if="step >= 1" @click.native="step-- ; navigationHandler($event)">Previous</v-btn>
                                         
                                     </v-flex>
                                     <v-flex>
@@ -109,33 +66,33 @@
 
                                     </v-flex>
                                     <v-flex>
-                                        <v-btn  color="primary" @click.native="step++">Next</v-btn>
+                                        <v-btn id="next" color="#6DCDEA" @click.native="step++; navigationHandler($event)">Next</v-btn>
 
                                     </v-flex>
                                     
                                 </v-layout>
                             </v-container> 
+                            </div>
+                            
 
                         </v-stepper>
                         
                                
-                        
+                       
 
-                    </v-container>
-
-                </v-content>
                 
             </v-app>
 
-            <br/><br/>
+            
 
             <!-- Debugging survey object -->
+            
         </div>   
 </template>
 
 <script>
 
-    //import the introduction component
+    //import the introduction component...realized I don't need to do this since it's done in the app.js
    import IntroductionComponent from './IntroductionComponent.vue'
 
     //This vue will simply hold the main common features of the 
@@ -174,7 +131,7 @@
                 survey: {
                     pages: null,
                 },
-                progressBarPercentage: 10,
+                progressBarPercentage: 0,
                 step: 1
                 
             }),
@@ -204,6 +161,27 @@
                         });
 
                         console.log("Test function worked bro!");
+                    },
+
+                    //Progress bar handler for navigation
+                    navigationHandler: function(buttonSource){
+
+                        var targetID = buttonSource.currentTarget.id;
+                                                
+                        if (targetID == "next" && this.step >= 1)
+                        {
+                            if (this.step == 2)
+                            {
+                                
+                            }
+                            this.progressBarPercentage += 20;
+                        }
+                        else
+                        {
+                            this.progressBarPercentage -= 20;
+                        }
+                        
+                        
                     }
         },
 

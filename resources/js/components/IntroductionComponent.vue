@@ -3,8 +3,8 @@
 -->
 
 <template>
-    <div id="app">
-       
+    <div id="app" >
+        <p class="center-text">Introduction</p> 
         <plan-component vbind:title="The Plan" :date=pageInfo.date :focuses="pageInfo.focuses" :notes="pageInfo.notes"></plan-component>
         
         <lastDay-component :lastDay="pageInfo.last_day"></lastDay-component>
@@ -31,7 +31,8 @@ export default {
 
     data: () =>({
         title : null,
-        focuses : {}
+        focuses : {},
+        scrollLast: 0
 
     }),
 
@@ -43,6 +44,30 @@ export default {
         console.log(this.introSurveyAnswers)
 
     },
+
+    created () {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+
+    destroyed () {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
+
+    methods: {
+        
+        handleSCroll: function(){
+            var scrollDirection = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollDirection > scrollLast)
+            {
+                console.log("SCROLL DOWN");
+            }
+            else
+            {
+                console.log("SCROLL UP");
+            }
+            scrollTo('#bottom', 500, { easing: 'linear', offset: -50 });
+        }
+    }
 
     
     
