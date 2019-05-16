@@ -11,14 +11,38 @@
 
 
 body {
-    margin-top: 25px;
-    display:inline-block;
+    
+    padding-top: 50px;
+    display:block;
+    background-color: rgb(38, 94, 167);
 }
 
 .bottom-pad{
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .top-padding{
-    margin-top: 100px;
+    margin-top: 500px;
+}
+
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar-test {
+  background-color: white;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.center-text{
+    text-align: center;
+}
+
+
+
+
+.grey-background{
+    background-color: #E6E8EA;
 }
