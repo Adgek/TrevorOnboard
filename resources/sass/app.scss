@@ -26,13 +26,39 @@ body {
 }
 
 
-/* Place the navbar at the bottom of the page, and make it stick */
+/* Placing the bottom navbar */
 .navbar-test {
   background-color: white;
   overflow: hidden;
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.navbar{
+    background-color: #6DCDEA;
+
+}
+
+.navbar-brand {
+    
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+    color:white;
+
+}
+
+.heading-2 {
+	height: 28px;
+	width: 125px;
+	color: #111821;
+	font-family: Montserrat;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 28px;
 }
 
 

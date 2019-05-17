@@ -16,5 +16,7 @@ Route::get('/', function () {
     return view('example');
 });
 
-Route::get('SendCheckInInfo', 'SurveyController@SendCheckInInfo');
-Route::get('SanityCheck', 'SurveyController@SanityCheck');
+Route::get('/', 'SurveyController@SendCheckInInfo');
+
+// Route::get('SendCheckInInfo', 'SurveyController@SendCheckInInfo');
+// Route::get('SanityCheck', 'SurveyController@SanityCheck'); //debug to see if route is working

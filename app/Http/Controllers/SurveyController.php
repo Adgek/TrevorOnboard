@@ -9,6 +9,7 @@ use Illuminate\Support\Carbon;
 
 class SurveyController extends Controller
 {
+	//simple test function to ensure sanity (and working routes)
 	public function SanityCheck()
 	{
 		return response('THIS WORKED');
@@ -437,6 +438,9 @@ class SurveyController extends Controller
 		//dd($survey);
 		
 		//return survey object as JSON (for easier parsing of data)
-    	return response()->json(['survey' => $survey]);
+		//return response()->json(['survey' => $survey]);
+		$jsonSurvey = json_encode($survey);
+		//returning view directly to blade.php
+		return view('example', ['survey' => $jsonSurvey]);
     }
 }
