@@ -2109,35 +2109,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2155,6 +2126,10 @@ __webpack_require__.r(__webpack_exports__);
     title: {
       type: String,
       "default": 'Last Day'
+    },
+    discipline: {
+      type: String,
+      "default": 'SL'
     },
     location: {
       type: String,
@@ -2179,46 +2154,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2886,13 +2821,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     title: {
@@ -2905,6 +2833,10 @@ __webpack_require__.r(__webpack_exports__);
     },
     focuses: {
       type: [Object, Array]
+    },
+    discipline: {
+      type: String,
+      "default": 'SL'
     },
     date: {
       type: String
@@ -2944,14 +2876,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _IntroductionComponent_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./IntroductionComponent.vue */ "./resources/js/components/IntroductionComponent.vue");
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -67195,164 +67119,131 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "grey-background top-padding" },
-    [
-      _c("h3", [_vm._v(_vm._s(_vm.title))]),
-      _vm._v(" "),
-      _c(
-        "v-container",
-        { attrs: { fluid: "", "grid-list-lg": "" } },
-        [
-          _c(
-            "v-layout",
-            { attrs: { row: "", wrap: "" } },
-            [
-              _c(
-                "v-flex",
-                { attrs: { xs12: "" } },
-                [
-                  _c(
-                    "v-card",
-                    { staticClass: "black--text", attrs: { color: "white" } },
-                    [
-                      _c("v-card-title", { attrs: { "primary-title": "" } }, [
-                        _c("div", [
-                          _c(
-                            "div",
-                            { staticClass: "headline" },
-                            [
-                              _c(
-                                "v-layout",
-                                {
-                                  attrs: {
-                                    row: "",
-                                    "justify-space-between": ""
-                                  }
-                                },
-                                [
-                                  _c("v-flex", [
-                                    _vm._v(
-                                      "\n                        " +
-                                        _vm._s(_vm.location) +
-                                        "\n                    "
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("v-flex", [
-                                    _vm._v(
-                                      "\n                        " +
-                                        _vm._s(_vm.parsedDate) +
-                                        "\n                    "
-                                    )
-                                  ])
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("v-divider"),
-                      _vm._v(" "),
-                      _c("v-card-title", [
-                        _c(
-                          "div",
-                          [
-                            _c(
-                              "v-layout",
-                              {
-                                attrs: { row: "", "justify-space-between": "" }
-                              },
-                              [
-                                _c("v-flex", [
-                                  _vm._v(
-                                    "\n                    Check In\n                  "
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("v-flex", [
-                                  _vm._v(
-                                    "\n                    Check Out\n                  "
-                                  )
-                                ])
-                              ],
-                              1
-                            )
-                          ],
-                          1
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("v-divider"),
-                      _vm._v(" "),
-                      _c("v-card-title", [
-                        _c("div", [
-                          _vm._v(
-                            "\n                    Insights\n            \n                "
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("v-divider"),
-                      _vm._v(" "),
-                      _c("v-card-title", [
-                        _c("div", [
-                          _vm._v(
-                            "\n                    My focus today was...\n             \n                "
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("v-card-text", [
-                        _c("div", [
-                          _vm._v(
-                            "\n                " +
-                              _vm._s(_vm.lastDay.focus_today_answer) +
-                              "\n            \n              "
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("v-divider"),
-                      _vm._v(" "),
-                      _c("v-card-title", [
-                        _c("div", [
-                          _vm._v(
-                            "\n                    To be a better ski racer I can...\n            \n                "
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("v-card-text", [
-                        _c("div", [
-                          _vm._v(
-                            "\n                " +
-                              _vm._s(_vm.lastDay.better_today_answer) +
-                              "\n            \n              "
-                          )
-                        ])
-                      ])
-                    ],
-                    1
+  return _c("div", { staticClass: "grey-background top-padding" }, [
+    _c("h3", [_vm._v(_vm._s(_vm.title))]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "card" }, [
+        _c(
+          "div",
+          { staticClass: "container" },
+          [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col" }, [
+                _c("div", { staticClass: "headline" }, [
+                  _vm._v(
+                    "\n                  *Icon* " +
+                      _vm._s(_vm.discipline) +
+                      "\n              "
                   )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col" }, [
+                _c("div", { staticClass: "headline" }, [
+                  _vm._v(
+                    "\n                  " +
+                      _vm._s(_vm.location) +
+                      "\n              "
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col" }, [
+                _c("div", { staticClass: "headline" }, [
+                  _vm._v(
+                    "\n                  " +
+                      _vm._s(_vm.parsedDate) +
+                      "\n              "
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(0),
+            _vm._v(" "),
+            _c("v-divider"),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col" }, [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(_vm.lastDay.focus_today_answer) +
+                    "\n        \n          "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(3),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col" }, [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(_vm.lastDay.better_today_answer) +
+                    "\n            \n\n          "
+                )
+              ])
+            ])
+          ],
+          1
+        )
+      ])
+    ])
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col" }, [
+        _vm._v("\n            Check In\n          ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col" }, [
+        _vm._v("\n            Check Out\n          ")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col" }, [
+        _c("div", { staticClass: "headline" }, [
+          _vm._v("\n              Insights\n            ")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col" }, [
+        _vm._v("\n            My focus today was...\n    \n          ")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col" }, [
+        _vm._v("\n            To be a better ski racer I can...\n\n          ")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -67374,308 +67265,185 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "grey-background" },
-    [
-      _c("h3", [_vm._v(_vm._s(_vm.title))]),
+  return _c("div", { staticClass: "grey-background" }, [
+    _c("h3", [_vm._v(_vm._s(_vm.title))]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col" }, [
+              _vm.questions[0]
+                ? _c("div", { staticClass: "headline" }, [
+                    _vm._v(
+                      "\n                               \n                                " +
+                        _vm._s(_vm.questions[0].question) +
+                        "\n                                   \n                            "
+                    )
+                  ])
+                : _vm._e()
+            ])
+          ]),
+          _vm._v(" "),
+          _vm.questions[0]
+            ? _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col" },
+                  _vm._l(5, function(n) {
+                    return _c(
+                      "div",
+                      { key: n, staticClass: "row justify-content-center" },
+                      [
+                        _c(
+                          "v-btn",
+                          {
+                            attrs: { id: "energyLevelQuestion" },
+                            on: {
+                              click: function($event) {
+                                return _vm.handleButton($event)
+                              }
+                            }
+                          },
+                          [_vm._v(_vm._s(_vm.questions[0].scale[6 - n]))]
+                        )
+                      ],
+                      1
+                    )
+                  }),
+                  0
+                )
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            this.energyQuestionTrigger == true
+              ? _c(
+                  "div",
+                  { staticClass: "col" },
+                  [
+                    _c("v-text-field", {
+                      attrs: { box: "", label: _vm.questions[1].question },
+                      model: {
+                        value:
+                          _vm.surveyAnswers.pages.myBody.answers[
+                            "Why is energy low?"
+                          ],
+                        callback: function($$v) {
+                          _vm.$set(
+                            _vm.surveyAnswers.pages.myBody.answers,
+                            "Why is energy low?",
+                            $$v
+                          )
+                        },
+                        expression:
+                          "surveyAnswers.pages.myBody.answers['Why is energy low?']"
+                      }
+                    })
+                  ],
+                  1
+                )
+              : _vm._e()
+          ]),
+          _vm._v(" "),
+          _vm._m(0)
+        ])
+      ]),
       _vm._v(" "),
-      _c(
-        "v-container",
-        { attrs: { fluid: "", "grid-list-lg": "" } },
-        [
-          _c(
-            "v-layout",
-            { attrs: { row: "", wrap: "" } },
-            [
-              _c(
-                "v-flex",
-                { attrs: { xs12: "" } },
-                [
-                  _c(
-                    "v-card",
-                    { staticClass: "black--text", attrs: { color: "white" } },
-                    [
-                      _c(
-                        "v-card-title",
-                        {
-                          staticClass: "justify-center",
-                          attrs: { "primary-title": "" }
-                        },
+      _c("div", { staticClass: "card top-padding" }, [
+        _c("div", { staticClass: "container" }, [
+          _vm.questions[0]
+            ? _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col" }, [
+                  _c("div", { staticClass: "headline" }, [
+                    _vm._v(
+                      "\n                                " +
+                        _vm._s(_vm.questions[2].question) +
+                        "\n\n                            "
+                    )
+                  ])
+                ])
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.questions[2]
+            ? _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col" },
+                  [
+                    _vm._l(2, function(n) {
+                      return _c(
+                        "div",
+                        { key: n, staticClass: "row justify-content-center" },
                         [
-                          _c("div", [
-                            _c(
-                              "div",
-                              { staticClass: "headline" },
-                              [
-                                _vm.questions[0]
-                                  ? _c(
-                                      "v-layout",
-                                      { attrs: { row: "" } },
-                                      [
-                                        _c("v-flex", [
-                                          _vm._v(
-                                            "\n                                        " +
-                                              _vm._s(
-                                                _vm.questions[0].question
-                                              ) +
-                                              "\n                                    "
-                                          )
-                                        ])
-                                      ],
-                                      1
-                                    )
-                                  : _vm._e()
-                              ],
-                              1
-                            )
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _vm.questions[0]
-                        ? _c(
-                            "v-card-text",
-                            [
-                              _c(
-                                "v-card-actions",
-                                { staticClass: "justify-center" },
-                                [
-                                  _c(
-                                    "div",
-                                    [
-                                      _vm._l(5, function(n) {
-                                        return _c(
-                                          "v-flex",
-                                          { key: n },
-                                          [
-                                            _c(
-                                              "v-btn",
-                                              {
-                                                attrs: {
-                                                  id: "energyLevelQuestion",
-                                                  block: ""
-                                                },
-                                                on: {
-                                                  click: function($event) {
-                                                    return _vm.handleButton(
-                                                      $event
-                                                    )
-                                                  }
-                                                }
-                                              },
-                                              [
-                                                _vm._v(
-                                                  _vm._s(
-                                                    _vm.questions[0].scale[
-                                                      6 - n
-                                                    ]
-                                                  )
-                                                )
-                                              ]
-                                            )
-                                          ],
-                                          1
-                                        )
-                                      }),
-                                      _vm._v(" "),
-                                      this.energyQuestionTrigger == true
-                                        ? _c(
-                                            "v-flex",
-                                            [
-                                              _c("v-text-field", {
-                                                attrs: {
-                                                  box: "",
-                                                  label:
-                                                    _vm.questions[1].question
-                                                },
-                                                model: {
-                                                  value:
-                                                    _vm.surveyAnswers.pages
-                                                      .myBody.answers[
-                                                      "Why is energy low?"
-                                                    ],
-                                                  callback: function($$v) {
-                                                    _vm.$set(
-                                                      _vm.surveyAnswers.pages
-                                                        .myBody.answers,
-                                                      "Why is energy low?",
-                                                      $$v
-                                                    )
-                                                  },
-                                                  expression:
-                                                    "surveyAnswers.pages.myBody.answers['Why is energy low?']"
-                                                }
-                                              })
-                                            ],
-                                            1
-                                          )
-                                        : _vm._e()
-                                    ],
-                                    2
-                                  )
-                                ]
-                              )
-                            ],
-                            1
+                          _c(
+                            "v-btn",
+                            {
+                              attrs: { id: "eatDrinkQuestion" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.handleButton($event)
+                                }
+                              }
+                            },
+                            [_vm._v(_vm._s(_vm.questions[2].scale[2 - n]))]
                           )
-                        : _vm._e()
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-flex",
-                { attrs: { xs12: "" } },
-                [
-                  _c(
-                    "v-card",
-                    { staticClass: "black--text", attrs: { color: "white" } },
-                    [
-                      _c(
-                        "v-card-title",
-                        {
-                          staticClass: "justify-center",
-                          attrs: { "primary-title": "" }
-                        },
-                        [
-                          _c("div", [
-                            _c(
-                              "div",
-                              { staticClass: "headline" },
-                              [
-                                _vm.questions[0]
-                                  ? _c(
-                                      "v-layout",
-                                      { attrs: { row: "" } },
-                                      [
-                                        _c("v-flex", [
-                                          _vm._v(
-                                            "\n                                        " +
-                                              _vm._s(
-                                                _vm.questions[2].question
-                                              ) +
-                                              "\n                                    "
-                                          )
-                                        ])
-                                      ],
-                                      1
-                                    )
-                                  : _vm._e()
-                              ],
-                              1
-                            )
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _vm.questions[2]
-                        ? _c(
-                            "v-card-text",
-                            [
-                              _c(
-                                "v-card-actions",
-                                { staticClass: "justify-center" },
-                                [
-                                  _c(
-                                    "div",
-                                    [
-                                      _vm._l(2, function(n) {
-                                        return _c(
-                                          "v-flex",
-                                          { key: n },
-                                          [
-                                            _c(
-                                              "v-btn",
-                                              {
-                                                attrs: {
-                                                  id: "eatDrinkQuestion",
-                                                  block: ""
-                                                },
-                                                on: {
-                                                  click: function($event) {
-                                                    return _vm.handleButton(
-                                                      $event
-                                                    )
-                                                  }
-                                                }
-                                              },
-                                              [
-                                                _vm._v(
-                                                  _vm._s(
-                                                    _vm.questions[2].scale[
-                                                      2 - n
-                                                    ]
-                                                  )
-                                                )
-                                              ]
-                                            )
-                                          ],
-                                          1
-                                        )
-                                      }),
-                                      _vm._v(" "),
-                                      this.eatDrinkQuestionTrigger == true
-                                        ? _c(
-                                            "v-flex",
-                                            [
-                                              _c("v-text-field", {
-                                                attrs: {
-                                                  box: "",
-                                                  label:
-                                                    _vm.questions[3].question
-                                                },
-                                                model: {
-                                                  value:
-                                                    _vm.surveyAnswers.pages
-                                                      .myBody.answers[
-                                                      "Why didnt I eat right?"
-                                                    ],
-                                                  callback: function($$v) {
-                                                    _vm.$set(
-                                                      _vm.surveyAnswers.pages
-                                                        .myBody.answers,
-                                                      "Why didnt I eat right?",
-                                                      $$v
-                                                    )
-                                                  },
-                                                  expression:
-                                                    "surveyAnswers.pages.myBody.answers['Why didnt I eat right?']"
-                                                }
-                                              })
-                                            ],
-                                            1
-                                          )
-                                        : _vm._e()
-                                    ],
-                                    2
+                        ],
+                        1
+                      )
+                    }),
+                    _vm._v(" "),
+                    this.eatDrinkQuestionTrigger == true
+                      ? _c(
+                          "div",
+                          { staticClass: "row" },
+                          [
+                            _c("v-text-field", {
+                              attrs: {
+                                box: "",
+                                label: _vm.questions[3].question
+                              },
+                              model: {
+                                value:
+                                  _vm.surveyAnswers.pages.myBody.answers[
+                                    "Why didnt I eat right?"
+                                  ],
+                                callback: function($$v) {
+                                  _vm.$set(
+                                    _vm.surveyAnswers.pages.myBody.answers,
+                                    "Why didnt I eat right?",
+                                    $$v
                                   )
-                                ]
-                              )
-                            ],
-                            1
-                          )
-                        : _vm._e()
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
+                                },
+                                expression:
+                                  "surveyAnswers.pages.myBody.answers['Why didnt I eat right?']"
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      : _vm._e()
+                  ],
+                  2
+                )
+              ])
+            : _vm._e()
+        ])
+      ])
+    ])
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col" })
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -68466,143 +68234,106 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "grey-background" },
-    [
-      _c("h3", [_vm._v(_vm._s(_vm.title))]),
-      _vm._v(" "),
-      _c(
-        "v-container",
-        { attrs: { fluid: "", "grid-list-lg": "" } },
-        [
+  return _c("div", { staticClass: "grey-background" }, [
+    _c("h3", [_vm._v(_vm._s(_vm.title))]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col" }, [
+              _c("div", { staticClass: "headline" }, [
+                _vm._v(
+                  "\n                            *Icon* " +
+                    _vm._s(_vm.discipline) +
+                    "\n                        "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col" }, [
+              _c("div", { staticClass: "headline" }, [
+                _vm._v(
+                  "\n                            " +
+                    _vm._s(_vm.location) +
+                    "\n                        "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col" }, [
+              _c("div", { staticClass: "headline" }, [
+                _vm._v(
+                  "\n                            " +
+                    _vm._s(_vm.parsedDate) +
+                    "\n                        "
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
           _c(
-            "v-layout",
-            { attrs: { row: "", wrap: "" } },
-            [
-              _c(
-                "v-flex",
-                { attrs: { xs12: "" } },
-                [
-                  _c(
-                    "v-card",
-                    { staticClass: "black--text", attrs: { color: "white" } },
-                    [
-                      _c("v-card-title", { attrs: { "primary-title": "" } }, [
-                        _c(
-                          "div",
-                          { staticClass: "headline" },
-                          [
-                            _c(
-                              "v-layout",
-                              {
-                                attrs: {
-                                  "align-space-between": "",
-                                  "justify-space-around": "",
-                                  row: ""
-                                }
-                              },
-                              [
-                                _c("v-flex", [
-                                  _vm._v(
-                                    "\n                                    " +
-                                      _vm._s(_vm.location) +
-                                      "\n                                "
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("v-flex", [
-                                  _vm._v(
-                                    "\n                                " +
-                                      _vm._s(_vm.parsedDate) +
-                                      "\n                                "
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("v-flex", [
-                                  _vm._v(
-                                    "\n                                    TEST\n                                "
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("v-flex", { attrs: { xs1: "" } }, [
-                                  _vm._v(
-                                    "\n                                    TEST2\n                                "
-                                  )
-                                ])
-                              ],
-                              1
-                            )
-                          ],
-                          1
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("v-card-title", [
-                        _c("div", [
-                          _vm._v(
-                            "\n                        \n                            Focus\n                \n                        "
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "v-card-actions",
-                        _vm._l(_vm.focuses, function(focus) {
-                          return _c(
-                            "div",
-                            { key: focus },
-                            [
-                              _c(
-                                "v-flex",
-                                [
-                                  _c("v-btn", { attrs: { disabled: "" } }, [
-                                    _vm._v(_vm._s(focus))
-                                  ])
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        }),
-                        0
-                      ),
-                      _vm._v(" "),
-                      _c("v-card-title", [
-                        _c("div", [
-                          _vm._v(
-                            "\n                            Coach's Plan\n                        "
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("v-card-text", [
-                        _c("div", [
-                          _vm._v(
-                            "\n\n                            " +
-                              _vm._s(_vm.notes) +
-                              "\n                \n                        "
-                          )
-                        ])
-                      ])
-                    ],
-                    1
-                  )
-                ],
-                1
+            "div",
+            { staticClass: "row" },
+            _vm._l(_vm.focuses, function(focus) {
+              return _c("div", { key: focus }, [
+                _c(
+                  "div",
+                  { staticClass: "col" },
+                  [
+                    _c("v-btn", { attrs: { disabled: "" } }, [
+                      _vm._v(_vm._s(focus))
+                    ])
+                  ],
+                  1
+                )
+              ])
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col" }, [
+              _vm._v(
+                "\n\n                        " +
+                  _vm._s(_vm.notes) +
+                  "\n            \n                    "
               )
-            ],
-            1
-          )
-        ],
-        1
-      )
-    ],
-    1
-  )
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col" }, [
+        _vm._v(
+          "\n                    \n                        Focus\n            \n                    "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col" }, [
+        _vm._v("\n                        Coach's Plan\n                    ")
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -68650,7 +68381,7 @@ var render = function() {
             ? _c(
                 "v-stepper",
                 {
-                  staticClass: "grey-background",
+                  staticClass: "grey-background bottom-padding",
                   attrs: { vertical: "" },
                   model: {
                     value: _vm.step,
@@ -68667,7 +68398,10 @@ var render = function() {
                     [
                       _c(
                         "v-stepper-content",
-                        { attrs: { step: "1" } },
+                        {
+                          staticClass: "no-border no-margin no-padding",
+                          attrs: { step: "1" }
+                        },
                         [
                           _c("introduction-component", {
                             attrs: {
@@ -68681,7 +68415,10 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "v-stepper-content",
-                        { attrs: { step: "2" } },
+                        {
+                          staticClass: "no-border no-margin no-padding",
+                          attrs: { step: "2" }
+                        },
                         [
                           _c("myBody-component", {
                             attrs: {
@@ -68696,7 +68433,10 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "v-stepper-content",
-                        { attrs: { step: "3" } },
+                        {
+                          staticClass: "no-border no-margin no-padding",
+                          attrs: { step: "3" }
+                        },
                         [
                           _c("myMindset-component", {
                             attrs: {
@@ -68711,7 +68451,10 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "v-stepper-content",
-                        { attrs: { step: "4" } },
+                        {
+                          staticClass: "no-border no-margin no-padding",
+                          attrs: { step: "4" }
+                        },
                         [
                           _c("mySkiing-component", {
                             attrs: {
@@ -68726,7 +68469,10 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "v-stepper-content",
-                        { attrs: { step: "5" } },
+                        {
+                          staticClass: "no-border no-margin",
+                          attrs: { step: "5" }
+                        },
                         [
                           _c("goals-component", {
                             attrs: {
@@ -68742,88 +68488,73 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "div",
-                    { staticClass: "navbar-test" },
-                    [
-                      _c(
-                        "v-container",
-                        { attrs: { "grid-list-md": "", "text-xs-center": "" } },
-                        [
-                          _c(
-                            "v-layout",
-                            { attrs: { row: "", wrap: "" } },
-                            [
-                              _c(
-                                "v-flex",
-                                [
-                                  _vm.step >= 1
-                                    ? _c(
-                                        "v-btn",
-                                        {
-                                          staticClass: "text--white",
-                                          attrs: {
-                                            id: "previous",
-                                            color: "#E6E8EA"
-                                          },
-                                          nativeOn: {
-                                            click: function($event) {
-                                              _vm.step--
-                                              _vm.navigationHandler($event)
-                                            }
-                                          }
-                                        },
-                                        [_vm._v("Previous")]
-                                      )
-                                    : _vm._e()
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-flex",
-                                [
-                                  _c("v-progress-linear", {
-                                    model: {
-                                      value: _vm.progressBarPercentage,
-                                      callback: function($$v) {
-                                        _vm.progressBarPercentage = $$v
-                                      },
-                                      expression: "progressBarPercentage"
-                                    }
-                                  })
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-flex",
-                                [
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { id: "next", color: "#6DCDEA" },
-                                      nativeOn: {
-                                        click: function($event) {
-                                          _vm.step++
-                                          _vm.navigationHandler($event)
-                                        }
+                  _c("div", { staticClass: "navbar-test" }, [
+                    _c("div", { staticClass: "container" }, [
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "div",
+                          { staticClass: "col" },
+                          [
+                            _vm.step >= 1
+                              ? _c(
+                                  "v-btn",
+                                  {
+                                    staticClass: "text--white",
+                                    attrs: { id: "previous", color: "#E6E8EA" },
+                                    nativeOn: {
+                                      click: function($event) {
+                                        _vm.step--
+                                        _vm.navigationHandler($event)
                                       }
-                                    },
-                                    [_vm._v("Next")]
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
+                                    }
+                                  },
+                                  [_vm._v("Previous")]
+                                )
+                              : _vm._e()
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "col" },
+                          [
+                            _c("v-progress-linear", {
+                              model: {
+                                value: _vm.progressBarPercentage,
+                                callback: function($$v) {
+                                  _vm.progressBarPercentage = $$v
+                                },
+                                expression: "progressBarPercentage"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "col" },
+                          [
+                            _c(
+                              "v-btn",
+                              {
+                                attrs: { id: "next", color: "#6DCDEA" },
+                                nativeOn: {
+                                  click: function($event) {
+                                    _vm.step++
+                                    _vm.navigationHandler($event)
+                                  }
+                                }
+                              },
+                              [_vm._v("Next")]
+                            )
+                          ],
+                          1
+                        )
+                      ])
+                    ])
+                  ])
                 ],
                 1
               )
