@@ -23,42 +23,42 @@
         <!-- Used vuetify for some cool travelling between 'pages' -->
         <v-app class="grey-background">
 
-            <v-stepper class="grey-background" v-model="step" vertical v-if="survey.pages" > <!-- Scroll to top is working after clicking 'Previous' and 'Next' -->
+            <v-stepper class="grey-background bottom-padding" v-model="step" vertical v-if="survey.pages" > <!-- Scroll to top is working after clicking 'Previous' and 'Next' -->
 
                 <!-- total pages with headers - used to step back and forth -->
                 <!-- TODO: template based on total pages -->
                 
                 <v-stepper-items class="grey-background" >
                     
-                    <v-stepper-content step="1">
+                    <v-stepper-content class="no-border no-margin no-padding" step="1">
                         
                         <!-- Introduction -->
                         <introduction-component :pageInfo=survey.pages[0] :introSurveyAnswers=surveyAnswers></introduction-component>
                     
                     </v-stepper-content>
                     
-                    <v-stepper-content step="2">
+                    <v-stepper-content class="no-border no-margin no-padding" step="2">
                         
                         <!-- My Body -->
                         <myBody-component  :myBody=survey.pages[1] vbind:title="My Body" :surveyAnswers=surveyAnswers></myBody-component>
 
                     </v-stepper-content>
                     
-                    <v-stepper-content step="3">
+                    <v-stepper-content class="no-border no-margin no-padding" step="3">
                         
                         <!-- My Mindset -->
                         <myMindset-component :myMindset=survey.pages[2] vbind:title="My Mindset" :surveyAnswers=surveyAnswers></myMindset-component>
                         
                     </v-stepper-content>
                     
-                    <v-stepper-content step="4">
+                    <v-stepper-content class="no-border no-margin no-padding" step="4">
                     
                         <!-- My Skiing -->
                         <mySkiing-component :mySkiing=survey.pages[3] vbind:title="My Skiing" :surveyAnswers=surveyAnswers></mySkiing-component>
 
                     </v-stepper-content>
                     
-                    <v-stepper-content step="5">
+                    <v-stepper-content class="no-border no-margin" step="5">
                     
                         <!-- My Goals -->
                         <goals-component :myGoals=survey.pages[4] vbind:title="Goals" :surveyAnswers=surveyAnswers></goals-component>
@@ -69,32 +69,24 @@
                         
                 <div class="navbar-test">
                             
-                    <v-container grid-list-md text-xs-center>
-                            
-                        <v-layout row wrap>
-                            
-                            <v-flex>
-                                
+                   
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
                                 <v-btn id="previous" class="text--white" color="#E6E8EA" v-if="step >= 1" @click.native="step-- ; navigationHandler($event)">Previous</v-btn>
-                                
-                            </v-flex>
-                            
-                            <v-flex>
-                                
-                                <!-- Basic progress bar. Just a placeholder, for now -->
+
+                            </div>
+                            <div class="col">
                                 <v-progress-linear v-model="progressBarPercentage"></v-progress-linear>
 
-                            </v-flex>
-                            
-                            <v-flex>
-                                
+                            </div>
+                            <div class="col">
                                 <v-btn id="next" color="#6DCDEA" @click.native="step++; navigationHandler($event)">Next</v-btn>
 
-                            </v-flex>
-                            
-                        </v-layout>
-                        
-                    </v-container> 
+                            </div>
+                        </div>
+                    </div> 
                 
                 </div>
 

@@ -8,94 +8,87 @@
        
         <h3>{{title}}</h3>
  
-        <v-container fluid grid-list-lg >
-        
-          <v-layout row wrap >
-        
-                <v-flex xs12>
+        <div class="container">
             
-                    <v-card color="white" class="black--text">
-            
-                        <v-card-title primary-title >
-                    
+            <div class="card">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col">
+                            
                             <div class="headline">
+                                *Icon* {{discipline}}
+                            </div>
                                 
-                                <!-- TODO: figure out a clean way to center headings -->
-                                <v-layout align-space-between justify-space-around row>
-            
-                                    <v-flex >
-                                        {{location}}
-                                    </v-flex>
-                            
-                                    <v-flex >
-                                    {{parsedDate}}
-                                    </v-flex>
-            
-                                    <v-flex >
-                                        TEST
-                                    </v-flex>
-            
-                                    <v-flex xs1>
-                                        TEST2
-                                    </v-flex>
-            
-                                </v-layout>
-                            
-                            </div>
-                        
-                        </v-card-title>
-
-                        <v-card-title>
-                    
-                            <div>
-                            
-                                Focus
-                    
-                            </div>
-                        
-                        </v-card-title>
-                    
-                        <v-card-actions>
-
-                            <div v-for="focus in focuses" :key="focus">
-                    
-                                <v-flex >
-                    
-                                    <v-btn disabled>{{focus}}</v-btn>
-
-                                </v-flex>
-
-                            </div>
-                    
-                        </v-card-actions>
-                    
-                        <v-card-title>
-                    
-                            <div>
-                                Coach's Plan
-                            </div>
-                        
-                        </v-card-title>
-                    
-                        <v-card-text>
-
-                            <div>
-
-                                {{notes}}
-                    
-                            </div>
-                    
-                        </v-card-text>
-                    
-                    </v-card>
+                        </div>
                 
-                </v-flex>
-          
-            </v-layout>
+                        <div class="col">
+                            <div class="headline">
+                                {{location}}
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="headline">
+                                {{parsedDate}}
+                            </div>
+                        </div>
         
-        </v-container>
+                    
+                    </div>
+                    
+                    <div class=row>
+                        
+                        <div class="col">
+                        
+                            Focus
+                
+                        </div>
+                        
+                    </div>
+
+                    <div class="row">
+
+                        <div v-for="focus in focuses" :key="focus">
+                
+                            <div class="col">
+                
+                                <v-btn disabled>{{focus}}</v-btn>
+
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="row">
+                            
+                        <div class="col">
+                            Coach's Plan
+                        </div>
+                        
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="col">
+
+                            {{notes}}
+                
+                        </div>
+                
+                    </div>
+                </div>
+                
+            
+            </div>
+    
+        </div>
+    </div>    
+        
+                    
+        
        
-    </div>
 
 </template>
 
@@ -121,6 +114,11 @@ export default {
 
             type: [Object, Array]
 
+        },
+
+        discipline: {
+            type: String,
+            default: 'SL'
         },
 
         date: {
