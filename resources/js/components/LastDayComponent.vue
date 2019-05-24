@@ -1,11 +1,12 @@
 <template>
     
-  <div class="grey-background top-padding">
+  <div class="grey-background ">
     
-    <h3>{{title}}</h3>
+   
 
       
     <div class="container">
+         <h3 class="heading-3-montserrat-left-blac">{{title}}</h3>
       
       <div class="card">
         
@@ -14,21 +15,23 @@
                         
             <div class="col">
                 
-                <div class="headline">
-                    *Icon* {{discipline}}
+                <div class="heading-3-bold-montserrat-left">
+                    <p>
+                      <v-icon>fa-stopwatch</v-icon> {{discipline}}
+                    </p> 
                 </div>
                     
             </div>
     
             <div class="col">
-                <div class="headline">
+                <div class="heading-3-bold-montserrat-cent ">
                     {{location}}
                 </div>
             </div>
 
             <div class="col">
-                <div class="headline">
-                    {{parsedDate}}
+                <div class="heading-3-bold-montserrat-righ ">
+                    {{date}}
                 </div>
             </div>
 
@@ -36,27 +39,29 @@
           </div>
 
           <div class="row">
-            
-            <div class="col">
-              Check In
+            <!-- For these two check box icons below,
+            eventually can just do an if statement to get the
+            appropriate icon (completed vs. not) -->
+            <div class="col text-center caption-montserrat-center-black ">
+              <v-icon>fa-check-circle</v-icon> Check In
             </div>
       
-            <div class="col">
-              Check Out
+            <div class="col text-center caption-montserrat-center-black ">
+              <v-icon>fa-check-circle</v-icon>Check Out
             </div>
 
           </div>
           <v-divider></v-divider>
           <div class="row">
             <div class="col">
-              <div class="headline">
+              <div class="card-headings-montserrat-left-black ">
                 Insights
               </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="col">
+            <div class="col top-padding-sml heading-4-montserrat-center-black-left">
               My focus today was...
       
             </div>
@@ -64,20 +69,20 @@
 
           <div class="row">
 
-            <div class="col">
+            <div class="col paragraph">
               {{lastDay.focus_today_answer}}
           
             </div>
           </div>
           <div class="row">
-            <div class="col">
+            <div class="col top-padding-sml heading-4-montserrat-center-black-left">
               To be a better ski racer I can...
 
             </div>
           </div>
           
           <div class="row">
-            <div class="col">
+            <div class="col paragraph">
               {{lastDay.better_today_answer}}
               
 
@@ -88,8 +93,9 @@
           
       </div>
     </div>  
-
   </div>
+
+  
 
 </template>
 
@@ -99,15 +105,14 @@ export default {
 
   data: ()=> ({
 
-    parsedDate: null //parsed date to get correct date format from date structure
+    date: null //parsed date to get correct date format from date structure
   
   }),
 
   mounted() {
 
-      this.parseDate(this.lastDay.date);
-      console.log(this.lastDay.date);
-      console.log(this.parsedDate);
+      this.date = this.lastDay.date;
+      
        
   },
 
@@ -134,12 +139,8 @@ export default {
     }
   },
 
-  methods: {
-
-    parseDate: function(nonParsedDate) {
-        this.parsedDate = nonParsedDate.slice(0, 10);
-    }
-  }
+  
+  
     
 }
 

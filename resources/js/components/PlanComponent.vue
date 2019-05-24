@@ -6,31 +6,35 @@
     
     <div class="grey-background">
        
-        <h3>{{title}}</h3>
+        
  
         <div class="container">
+            <h3 class="heading-3-montserrat-left-blac">{{title}}</h3>
             
-            <div class="card">
+            <div class="card h-100">
                 <div class="container">
                     <div class="row">
                         
-                        <div class="col">
+                        
+
+                        <div class="col-3">
+                            <div class="heading-4-montserrat-center-black-left">
                             
-                            <div class="headline">
-                                *Icon* {{discipline}}
-                            </div>
+                                <v-icon>fa-stopwatch</v-icon>{{discipline}}
                                 
+                            </div>
+
                         </div>
                 
-                        <div class="col">
-                            <div class="headline">
+                        <div class="col-5">
+                            <div class="heading-3-bold-montserrat-cent ">
                                 {{location}}
                             </div>
                         </div>
 
-                        <div class="col">
-                            <div class="headline">
-                                {{parsedDate}}
+                        <div class="col-4">
+                            <div class="heading-4-black-right-date">
+                                {{date}}
                             </div>
                         </div>
         
@@ -39,7 +43,7 @@
                     
                     <div class=row>
                         
-                        <div class="col">
+                        <div class="col top-padding-sml heading-4-montserrat-center-black-left">
                         
                             Focus
                 
@@ -53,7 +57,7 @@
                 
                             <div class="col">
                 
-                                <v-btn disabled>{{focus}}</v-btn>
+                                <v-btn small disabled>{{focus}}</v-btn>
 
                             </div>
 
@@ -63,7 +67,7 @@
 
                     <div class="row">
                             
-                        <div class="col">
+                        <div class="col top-padding-sml heading-4-montserrat-center-black-left">
                             Coach's Plan
                         </div>
                         
@@ -71,7 +75,7 @@
 
                     <div class="row">
                         
-                        <div class="col">
+                        <div class="col paragraph">
 
                             {{notes}}
                 
@@ -141,7 +145,7 @@ export default {
 
     mounted() {
 
-        this.parseDate(this.date);
+        //this.parseDate(this.date);
         console.log('After');
         
         console.log(this.focuses);
@@ -155,6 +159,8 @@ export default {
 
             this.parsedDate = nonParsedDate.slice(0, 10);
         },
+
+        
 
     }
 

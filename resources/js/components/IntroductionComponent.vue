@@ -6,7 +6,7 @@
 
     <div id="app" >
 
-        <p class="center-text">Introduction</p> 
+        <h3 class="center-text heading-3-montserrat-center-black header-pad">Introduction</h3>
 
         <!-- Plan component vue -->
         <plan-component vbind:title="The Plan" :date=pageInfo.date :focuses="pageInfo.focuses" :notes="pageInfo.notes"></plan-component>

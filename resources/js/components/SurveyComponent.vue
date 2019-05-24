@@ -10,9 +10,9 @@
         <!-- Navbar at the top of screen TODO: centre it! -->       
         <div id="top" >
 
-            <b-navbar class="header bottom-pad"  fixed="top" >
+            <b-navbar class="header"  fixed="top" >
 
-                <b-navbar-brand >Check In
+                <b-navbar-brand class="heading-1-montserrat-center-wh">Check In
 
                 </b-navbar-brand>
 
@@ -21,9 +21,9 @@
         </div>
             
         <!-- Used vuetify for some cool travelling between 'pages' -->
-        <v-app class="grey-background">
+        <v-app >
 
-            <v-stepper class="grey-background bottom-padding" v-model="step" vertical v-if="survey.pages" > <!-- Scroll to top is working after clicking 'Previous' and 'Next' -->
+            <v-stepper class="bottom-padding" v-model="step" vertical v-if="survey.pages" > <!-- Scroll to top is working after clicking 'Previous' and 'Next' -->
 
                 <!-- total pages with headers - used to step back and forth -->
                 <!-- TODO: template based on total pages -->
@@ -58,7 +58,7 @@
 
                     </v-stepper-content>
                     
-                    <v-stepper-content class="no-border no-margin" step="5">
+                    <v-stepper-content class="no-border no-margin no-padding" step="5">
                     
                         <!-- My Goals -->
                         <goals-component :myGoals=survey.pages[4] vbind:title="Goals" :surveyAnswers=surveyAnswers></goals-component>
@@ -67,14 +67,22 @@
                 
                 </v-stepper-items>
                         
-                <div class="navbar-test">
+                
+            </v-stepper>
+
+            
+
+                    
+        </v-app>
+
+        <div class="navbar-test">
                             
                    
 
                     <div class="container">
                         <div class="row">
                             <div class="col">
-                                <v-btn id="previous" class="text--white" color="#E6E8EA" v-if="step >= 1" @click.native="step-- ; navigationHandler($event)">Previous</v-btn>
+                                <v-btn small id="previous" class="text--white" color="#E6E8EA" v-if="step >= 1" @click.native="step-- ; navigationHandler($event)">Previous</v-btn>
 
                             </div>
                             <div class="col">
@@ -82,17 +90,13 @@
 
                             </div>
                             <div class="col">
-                                <v-btn id="next" color="#6DCDEA" @click.native="step++; navigationHandler($event)">Next</v-btn>
+                                <v-btn small id="next" class="text-white" color="#6DCDEA" @click.native="step++; navigationHandler($event)">Next</v-btn>
 
                             </div>
                         </div>
                     </div> 
                 
                 </div>
-
-            </v-stepper>
-                    
-        </v-app>
            
     </div>   
 
@@ -105,6 +109,7 @@
 
     //This vue will simply hold the main common features of the 
     //survey i.e. => progres bar, next/prev buttons and the main header.
+    
 
     export default {
 
@@ -194,6 +199,8 @@
                         console.log("Test function worked bro!");
                     },
 
+                    
+                    
                     //Progress bar handler for navigation
                     navigationHandler: function(buttonSource){
 
@@ -212,7 +219,10 @@
                             this.progressBarPercentage -= 20;
                         }
                         
-                    }
+                    },
+
+
+                    
             },
 
         mounted() {

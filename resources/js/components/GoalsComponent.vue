@@ -1,63 +1,37 @@
 <template>
 
-    <div>
+    <div class="grey-background">
 
-        <h3>{{title}}</h3>
 
-            <v-container fluid grid-list-lg>
+        <div class="container">
+            <h3 class="center-text heading-3-montserrat-left-blac">{{title}}</h3>
 
-                <v-layout row wrap>
-
-                    <v-flex xs12>
-
-                        <v-card color="white" class="black--text">
-                        
-                            <v-card-title primary-title class="justify-center">
+            <div class="card">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
                                 
-                                <div>
+                            <div class="card-questions" v-if="goals[1]">
+
+                                What is your skiing goal today?
                                     
-                                    <div class="headline">
-                                        
-                                        <v-layout row  v-if="goals[1]">
-                                            
-                                            <v-flex >
-                                                What is your skiing goal today?
-                                            </v-flex>
-                                                                       
-                                        </v-layout>
-                                    </div>
-                            
-                                </div>
+                            </div>
                         
-                            </v-card-title>
-                        
-                            <v-card-text v-if="goals[1]" >
-                            
-                                <v-card-actions class="justify-center" >
-                            
-                                    <div >
-                            
-                                        <v-flex >
-                                            <!-- Load array into drop down -->
-                                            <v-select :items="goals" box label="Select a goal" v-model="surveyAnswers.pages.goals.answers['My skiing goal today?']"></v-select>
-                                                                                   
-                                        </v-flex>
-                                    
-                                    </div>
-                            
-                                </v-card-actions>
-                                                    
-                            </v-card-text>
-                        
-                        </v-card>
-                    
-                    </v-flex>
-                
-                </v-layout>
-            
-            </v-container>        
-        
+                        </div>
+                    </div>
+                    <div class="row" v-if="goals[1]" >
+                        <div class="col">
+                            <v-select :items="goals" box label="Select a goal" v-model="surveyAnswers.pages.goals.answers['My skiing goal today?']"></v-select>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+                        
+                                  
+      
 
 </template>
 
@@ -89,7 +63,7 @@ export default {
         title: {
 
             type: String,
-            default: 'My Skiing'
+            default: 'My Goals'
         }
 
         
