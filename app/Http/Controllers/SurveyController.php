@@ -62,7 +62,8 @@ class SurveyController extends Controller
     			$page->put('event_type', 'Training');
 				//discipline
 				$page->put('discipline', 'SL');
-				//date
+				//location
+				$page->put('location', 'Chicopee');
 				$time = Carbon::now();
 				$page->put('date', $time);
 				//focuses
@@ -435,7 +436,7 @@ class SurveyController extends Controller
     	//My Virtues
     		//List of Virtues
     	}
-		//dd($survey);
+		// dd($survey['pages']);
 		
 		//return survey object as JSON (for easier parsing of data)
 		//return response()->json(['survey' => $survey]);
