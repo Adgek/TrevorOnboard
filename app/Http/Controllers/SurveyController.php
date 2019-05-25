@@ -12,7 +12,7 @@ class SurveyController extends Controller
 	//simple test function to ensure sanity (and working routes)
 	public function SanityCheck()
 	{
-		return response('THIS WORKED');
+		return response('THIS is a test branch now MUTHAF**KA');
 	}
 
     //
